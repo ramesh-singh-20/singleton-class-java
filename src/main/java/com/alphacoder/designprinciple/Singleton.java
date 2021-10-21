@@ -3,6 +3,8 @@ package com.alphacoder.designprinciple;
 import java.io.Serializable;
 
 public class Singleton implements Serializable {
+    //variable is declared volatile so that it gets
+    // read from main memory instead of Thread's local cache.
     private static volatile Singleton instance;
 
     private Singleton(){
